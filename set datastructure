@@ -1,0 +1,66 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main(){
+   int limit1,i,j;
+   int choice;
+   int limit2;
+   int set1[20];
+     int set2[20];
+       int set3[40];
+       int k=limit1;
+       int n=limit1+limit2;
+        int flag=1;
+printf("enter number of elements in SET A:");
+scanf("%d",&limit1);
+
+printf("enter elements in SET A\n");
+for(i=0;i<limit1;i++){
+    scanf("%d",&set1[i]);
+}
+printf("enter number of elements in SET B:");
+scanf("%d",&limit2);
+printf("enter elements in SET B\n");
+for(j=0;j<limit2;j++){
+    scanf("%d",&set2[j]);
+}
+printf("\n*********Menu*************:");
+printf("Enter\n1 for union operation\n2 for intersection\n3 for difference of SET A and SET B (SET A-SET B)\n4 for difference of SET B and SET A (SET B-SET A)");
+scanf("%d",&choice);
+if(choice==1){
+
+ for(i=0;i<limit1;i++){
+    set3[i]=set1[i];
+   }
+
+for(j=0;j<limit2;j++){
+
+   for(i=0;i<limit1;i++){
+    if(set2[j]==set1[i]){
+       flag=0 ; int flag=1;
+     break;
+    }
+   }
+
+
+
+    set3[k]=set2[j];
+    k++;
+   }
+
+
+
+
+for(i=0;i<n;i++){
+    printf("%d",set3[i]);
+}
+}
+
+
+
+
+
+
+return 0;
+
+
+}
